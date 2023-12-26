@@ -18,4 +18,11 @@ func main() {
 		log.Println(err)
 	}
 	log.Printf("Recognized text:\n%v\n", text)
+
+	tessClient.SetImage("./images/repo_screenshot_2.jpg")
+	text, err = tessClient.Text()
+	if err != nil {
+		log.Println(err)
+	}
+	log.Printf("Recognized text:\n%v\n", text)
 }
